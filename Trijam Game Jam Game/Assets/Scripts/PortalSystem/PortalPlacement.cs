@@ -11,6 +11,9 @@ public class PortalPlacement : MonoBehaviour
     public Transform orangePortal;
     public float timebtwteleport; 
 
+    public float rangeX;
+    public float rangeY;
+
     void Start()
     {
         //Finding the blue portal
@@ -33,8 +36,8 @@ public class PortalPlacement : MonoBehaviour
     public void TeleportObj()
     {
         //Finds location within the camera range and teleports portal to there
-        float x = Random.Range(-8, 8);
-        float y = Random.Range(-2, 2);
+        float x = Random.Range(-rangeX, rangeX);
+        float y = Random.Range(-rangeY, rangeY);
         orangePortal.position = new Vector2(x, y);
     }
 }

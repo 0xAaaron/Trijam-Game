@@ -5,6 +5,7 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     private Transform destination; 
+    public ScoreManager scoreManager;
 
     public bool isOrange; 
     public float distfault; 
@@ -29,6 +30,9 @@ public class Portal : MonoBehaviour
         {
             other.transform.position = new Vector2(destination.position.x, destination.position.y);
             rb.AddForce(Vector3.right * force);
+            scoreManager.AddScore();
         }
     }
+
+   
 }

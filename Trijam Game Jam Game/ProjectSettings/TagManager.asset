@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BluePortal
   - OrangePortal
+  - player
   layers:
   - Default
   - TransparentFX
